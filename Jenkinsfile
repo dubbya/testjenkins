@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Say Hello') {
       steps {
-        powershell(script: 'Write-Output "Hello, World!"', returnStatus: true, returnStdout: true)
+        powershell(script: '/test.ps1', returnStatus: true, returnStdout: true)
       }
     }
   }
