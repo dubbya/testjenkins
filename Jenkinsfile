@@ -1,14 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('test1') {
+    stage('Say Hello') {
       steps {
-        echo 'test1 started'
-      }
-    }
-    stage('finish') {
-      steps {
-        echo 'done'
+        powershell(script: 'Write-Output "Hello, World!"', returnStatus: true, returnStdout: true)
       }
     }
   }
