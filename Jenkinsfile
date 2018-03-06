@@ -1,26 +1,10 @@
 pipeline {
-  agent {
-    node {
-      label 'master'
-    }
-    
-  }
+  agent any
   stages {
     stage('Hi') {
       agent {
         node {
           label 'K2VM'
-        }
-        
-      }
-      steps {
-        sleep 10
-      }
-    }
-    stage('') {
-      agent {
-        node {
-          label 'master'
         }
         
       }
