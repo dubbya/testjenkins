@@ -2,12 +2,7 @@ pipeline {
   agent any
   stages {
     stage('Say Hello') {
-      agent {
-        node {
-          label 'K2VM'
-        }
-        
-      }
+      agent any
       steps {
         powershell(script: 'c:\\test.ps1', returnStatus: true, returnStdout: true)
       }
